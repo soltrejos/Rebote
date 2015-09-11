@@ -1,0 +1,49 @@
+//Rebote de lado a lado//
+float posx=1;
+float velx = 1;
+int dirx=1;
+
+float posy=1;
+float vely = 1;
+int diry=1;
+
+void setup(){
+  
+  size(500,500);
+
+  }
+  
+void draw(){
+    background(249,178,51);
+  noStroke();
+  
+velx= velx + 0.1;
+
+posx=posx+(velx*dirx);
+posy=posy+(vely*diry);
+
+fill(243,146,0);
+rect(posx,posy,100,100);
+
+/*rect(480 - jaco,jaco,10,10);
+rect(jaco,458-jaco,10,10);
+rect(240,jaco,10,10);
+rect(480-jaco,458-jaco,10,10);
+rect(jaco,240,10,10);
+rect(458-jaco,240,10,10);*/
+
+println(velx);
+
+
+if(posx>400 || posx<0){
+  dirx=dirx* -1;
+}
+if(posy>400 || posy<0){
+  diry=diry*-1;
+}
+
+/*rectMode(CENTER);
+fill(243,146,0);
+fill(jaco/8,jaco/4,jaco/2);
+rect(width/2,height/2,jaco,jaco);*/
+}
